@@ -32,6 +32,8 @@ function performAction(){
         .catch(error => console.error(error.message));
 }
 
-inputElement.addEventListener('keyup', () => {
-    performAction();
+inputElement.addEventListener('keyup', (e) => {
+    if(e.keyCode === 13) {
+        performAction();
+    }
 });
